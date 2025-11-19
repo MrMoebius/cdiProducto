@@ -19,7 +19,7 @@ import java.sql.SQLException;
 public class ProducerResource {
 
     //Pasamos el name que hace referencia a nuestro codigo -> META-INF/context.xml
-    @Resource(name = "jdbc/mysqDB")
+    @Resource(name = "jdbc/mysqlDB")
     private DataSource ds;
 
     @Produces // convertir en bean el objeto que devuelve el metodo.

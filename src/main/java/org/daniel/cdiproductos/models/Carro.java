@@ -2,6 +2,7 @@ package org.daniel.cdiproductos.models;
 
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
+import org.daniel.cdiproductos.config.stereotype.CarroStereotype;
 
 
 import java.io.Serializable;
@@ -9,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@SessionScoped
-@Named
+@CarroStereotype
+//@SessionScoped
+//@Named
 //Por defecto se llama como el nombre de la clase en minuscula
 
 public class Carro implements Serializable {
