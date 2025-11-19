@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.daniel.cdiproductos.config.qualifier.ProductoBeanPrincipal;
 import org.daniel.cdiproductos.models.Carro;
 import org.daniel.cdiproductos.models.ItemCarro;
 import org.daniel.cdiproductos.models.Producto;
@@ -22,10 +23,10 @@ import java.util.Optional;
 public class AgregarCarroServlet extends HttpServlet {
 
     @Inject
-    @Named("carro")
     private Carro carro;
 
     @Inject
+    @ProductoBeanPrincipal
     private ProductoService productoService;
 
     @Override

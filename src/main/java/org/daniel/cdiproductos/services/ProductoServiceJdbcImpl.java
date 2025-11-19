@@ -3,6 +3,7 @@ package org.daniel.cdiproductos.services;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import org.daniel.cdiproductos.config.qualifier.ProductoBeanPrincipal;
 import org.daniel.cdiproductos.models.Categoria;
 import org.daniel.cdiproductos.models.Producto;
 import org.daniel.cdiproductos.repositorys.CategoriaRepositoryImpl;
@@ -16,6 +17,7 @@ import java.util.Optional;
 
 
 @ApplicationScoped
+@ProductoBeanPrincipal
 public class ProductoServiceJdbcImpl implements ProductoService{
 
     @Inject

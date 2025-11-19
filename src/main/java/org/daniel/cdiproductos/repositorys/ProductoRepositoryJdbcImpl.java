@@ -2,6 +2,7 @@ package org.daniel.cdiproductos.repositorys;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import org.daniel.cdiproductos.config.qualifier.ProducerResourceAnnotation;
 import org.daniel.cdiproductos.models.Categoria;
 import org.daniel.cdiproductos.models.Producto;
 
@@ -12,7 +13,7 @@ import java.util.List;
 public class ProductoRepositoryJdbcImpl implements Repository<Producto> {
 
     @Inject
-    @Named("producerConn")  // Injeccion por atributo
+    @ProducerResourceAnnotation  // Injeccion por atributo
     private Connection conn;
 
 //    public ProductoRepositoryJdbcImpl(Connection conn) {

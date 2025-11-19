@@ -10,7 +10,7 @@ import java.util.Optional;
 public class ProductoServiceHardImpl implements ProductoService{
 
 
-    // Esto realmente nose va a usar
+    // Esto realmente no se va a usar
     @Override
     public List<Producto> listar() {
         return List.of();

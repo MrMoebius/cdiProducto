@@ -5,6 +5,7 @@ import jakarta.inject.Named;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletResponse;
+import org.daniel.cdiproductos.config.qualifier.ProducerResourceAnnotation;
 import org.daniel.cdiproductos.services.ServiceJdbcException;
 import org.daniel.cdiproductos.util.ConexionBaseDatosDS;
 
@@ -17,7 +18,7 @@ import java.sql.SQLException;
 public class ConexionFilter implements Filter {
 
     @Inject
-    @Named("producerConn")
+    @ProducerResourceAnnotation
     private Connection connection;
 
     @Override

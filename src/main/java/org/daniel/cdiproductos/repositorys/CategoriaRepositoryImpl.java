@@ -3,6 +3,7 @@ package org.daniel.cdiproductos.repositorys;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import org.daniel.cdiproductos.config.qualifier.ProducerResourceAnnotation;
 import org.daniel.cdiproductos.models.Categoria;
 
 import java.sql.*;
@@ -16,7 +17,7 @@ public class CategoriaRepositoryImpl implements Repository<Categoria> {
     private final Connection conn;
 
     @Inject
-    public CategoriaRepositoryImpl(@Named("producerConn") Connection conn) {
+    public CategoriaRepositoryImpl(@ProducerResourceAnnotation Connection conn) {
         this.conn = conn;
     }
 

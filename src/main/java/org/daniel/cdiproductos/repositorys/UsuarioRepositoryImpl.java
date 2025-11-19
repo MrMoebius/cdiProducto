@@ -3,6 +3,7 @@ package org.daniel.cdiproductos.repositorys;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import org.daniel.cdiproductos.config.qualifier.ProducerResourceAnnotation;
 import org.daniel.cdiproductos.models.Usuario;
 
 import java.sql.Connection;
@@ -15,7 +16,7 @@ import java.util.List;
 public class UsuarioRepositoryImpl implements UsuarioRepository{
 
     @Inject
-    @Named("producerConn")  // Injeccion por atributo
+    @ProducerResourceAnnotation
     private Connection conn;
 
 //    public UsuarioRepositoryImpl(Connection conn) {

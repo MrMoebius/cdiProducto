@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.daniel.cdiproductos.config.qualifier.ProductoBeanPrincipal;
 import org.daniel.cdiproductos.models.Categoria;
 import org.daniel.cdiproductos.models.Producto;
 import org.daniel.cdiproductos.services.ProductoService;
@@ -25,6 +26,7 @@ import java.util.Optional;
 public class ProductoFormServlet extends HttpServlet {
 
     @Inject
+    @ProductoBeanPrincipal
     private ProductoService productoService;
 
     @Override
